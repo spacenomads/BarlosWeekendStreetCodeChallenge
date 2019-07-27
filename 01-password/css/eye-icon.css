@@ -1,0 +1,49 @@
+
+.eye {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform: scale(.75);
+}
+.eye__top {
+  width: 32px;
+  height: 22px;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  background: url(../img/eye__top.svg) left top no-repeat;
+  transform: scale(-1,-1);
+  transform-origin: center 20.5px;
+  transition: transform ease .5s;
+}
+.eye__iris {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1,0);
+  background-color: #585db8;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: transform ease .1s, opacity ease .2s;
+}
+.eye__bottom {
+  width: 32px;
+  height: 13px;
+  bottom: 8px;
+  position: absolute;
+  left: 4px;
+  background: url(../img/eye__bottom.svg) left top no-repeat;
+}
+
+.eye:hover .eye__top {
+  transform: scale(-1,1);
+}
+
+.eye:hover .eye__iris {
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1,1);
+  transition: transform ease .3s, opacity ease .3s;
+  transition-delay: .2s;
+}
