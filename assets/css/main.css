@@ -32,6 +32,7 @@
 	right: 24px;
 	top: 24px;
 	width: 24px;
+	z-index: 2;
 }
 
 
@@ -46,6 +47,7 @@
 	min-height: 500px;
 	padding-top: 60px;
 	position: relative;
+	z-index: 1;
 }
 .projects {
 	list-style: none;
